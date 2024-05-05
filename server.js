@@ -11,10 +11,13 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:5000", "https://steem-frontend.onrender.com"],
+    origin: [
+      "http://localhost:5000",
+      "https://steem-frontend.onrender.com/games",
+    ],
   })
 );
-mongoose.connect(process.env.MONGO_URI);
+mongoose.connect(MONGO_URI);
 const PORT = process.env.PORT || 5000;
 
 app.use("/games", gameRoutes);
