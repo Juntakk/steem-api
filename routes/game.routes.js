@@ -6,8 +6,8 @@ const {
   updateGame,
 } = require("../controllers/games.controller");
 
-const express = require("express"); // Import Express
-const router = express.Router(); // Create a new router instance
+const express = require("express");
+const router = express.Router();
 
 router.get("/", allGames);
 router.post("/", createGame);
